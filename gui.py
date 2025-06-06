@@ -17,7 +17,7 @@ class App(tk.CTk):
 
         self.header()
         self.buttons()
-        self.username_checker()
+        self.labels()
 
 
     def header(self):
@@ -27,24 +27,32 @@ class App(tk.CTk):
 
     def buttons(self):
         self.image_button = tk.CTkButton(self, text="Select Image", command=self.image_selector_callback)
-        self.image_button.grid(row=1, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
+        self.image_button.grid(row=1, column=0, padx=20, pady=20, sticky="ew", columnspan=1)
 
         self.show_image_button = tk.CTkButton(self, text="Show Image", command=self.preview_image)
         self.show_image_button.grid(row=2, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
 
-    def username_checker(self):
+    def labels(self):
         self.username = StringVar()
         self.username.set(getlogin())
 
         self.entry = tk.CTkEntry(self, textvariable=self.username)
-        self.entry.grid(row=3, column = 0, padx=20, pady=20, sticky="ew")
+        self.entry.grid(row=3, column = 1, padx=20, pady=20, sticky="ew")
+
+        self.username_label = tk.CTkLabel(self, text = "Username:")
+        self.username_label.grid(row = 3, column = 0, padx = 20, pady = 20, sticky = "ew")
+
+        self.file_path = StringVar()
+        self.entry = tk.CTkEntry(self, textvariable=self.file_path)
+        self.entry.grid(row=1, column = 1, padx=20, pady=20, sticky="ew")
+
 
     def image_selector_callback(self):
-        self.image_path = askopenfilename()
+        self.file_path.set(askopenfilename())
 
     def preview_image(self):
         try:
-            image = Image.open(self.image_path)
+            image = Image.open(self.file_path.get())
             image.show()
         except:
             print("Error: No Image Selected")
