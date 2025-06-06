@@ -3,6 +3,9 @@ from tkinter.filedialog import askopenfilename
 from tkinter import StringVar
 from PIL import Image
 from os import getlogin
+from pyperclip import copy
+from top_level import ToplevelWindow
+
 
 class App(tk.CTk):
     def __init__(self):
@@ -32,6 +35,9 @@ class App(tk.CTk):
         self.show_image_button = tk.CTkButton(self, text="Show Image", command=self.preview_image)
         self.show_image_button.grid(row=2, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
 
+        self.apply_button = tk.CTkButton(self, text="Get Command", command=self.apply_changes)
+        self.apply_button.grid(row=4, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
+
     def labels(self):
         self.username = StringVar()
         self.username.set(getlogin())
@@ -56,3 +62,14 @@ class App(tk.CTk):
             image.show()
         except:
             print("Error: No Image Selected")
+
+
+    def apply_changes(self):
+        src = self.file_path.get()
+        des = "/var/lib/AccountsService/icons/" + self.username.get()
+        command = f"cp {src} {des}"
+
+        top = ToplevelWindow()
+        top.text("Command:")
+        top.box(command)
+        copy(command)
