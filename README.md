@@ -45,9 +45,10 @@ Either use the tool provided or follow these instructions
 
 # To Do
 
-- [ ] select image
+- [x] select image
 - [ ] move image
 - [ ] have script identify username
+- [ ] error pop up
 
 
 - [ ] export as exe
