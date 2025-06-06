@@ -47,8 +47,8 @@ Either use the tool provided or follow these instructions
 
 - [x] select image
 - [ ] move image
-- [ ] have script identify username
-- [ ] error pop up
+- [x] have script identify username
+- [ ] pop up for errors and done
 
 
 - [ ] export as exe

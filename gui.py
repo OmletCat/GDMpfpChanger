@@ -1,5 +1,6 @@
 import customtkinter as tk
 from tkinter.filedialog import askopenfilename
+from tkinter import StringVar
 from PIL import Image
 from os import getlogin
 
@@ -16,6 +17,7 @@ class App(tk.CTk):
 
         self.header()
         self.buttons()
+        self.username_checker()
 
 
     def header(self):
@@ -29,6 +31,13 @@ class App(tk.CTk):
 
         self.show_image_button = tk.CTkButton(self, text="Show Image", command=self.preview_image)
         self.show_image_button.grid(row=2, column=0, padx=20, pady=20, sticky="ew", columnspan=2)
+
+    def username_checker(self):
+        self.username = StringVar()
+        self.username.set(getlogin())
+
+        self.entry = tk.CTkEntry(self, textvariable=self.username)
+        self.entry.grid(row=3, column = 0, padx=20, pady=20, sticky="ew")
 
     def image_selector_callback(self):
         self.image_path = askopenfilename()
