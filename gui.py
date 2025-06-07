@@ -12,7 +12,7 @@ class App(tk.CTk):
         super().__init__()
 
 
-        self.my_title = "GDM pfp changer"
+        self.my_title = "GDM pfp Changer"
         self.title(self.my_title)
         self.geometry("400x150")
         self.grid_columnconfigure((0, 1), weight=1)
@@ -61,8 +61,9 @@ class App(tk.CTk):
             image = Image.open(self.file_path.get())
             image.show()
         except:
-            print("Error: No Image Selected")
-
+            top = ToplevelWindow()
+            text = "Error: No image selected!"
+            top.text(text)
 
     def apply_changes(self):
         src = self.file_path.get()

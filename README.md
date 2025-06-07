@@ -1,13 +1,14 @@
 # What is this?
 
-Personally I find it really difficult to change my profile pictures while using gdm.
+Personally I find it really difficult to change my profile pictures / login icon while using gdm.
 
-I couldn't find any clear guides or tools with this feature so im making my own! :D
+I couldn't find any clear guides or tools with this feature so im making my own!
+Hope someone finds it useful :D
 
 ---
 
 # Easy Setup
-One command installer
+One command installer! Just copy and paste.
 ```
 git clone https://github.com/OmletCat/GDMpfpChanger.git
 python -m venv env
@@ -20,6 +21,8 @@ pip install -r requirements.txt
 source env/bin/activate
 python main.py
 ```
+
+Alternatively you can run the program with the `start.bash` script
 
 Note: You may need to install tkinter on your machine for the application to work, please refer to instructions below
 
@@ -55,19 +58,16 @@ pip install -r requirements.txt
 $ python main.py
 ```
 
-# How to change gdm Profile
-Either use the tool provided or follow these instructions
+or
 
----
+```
+sh start.bash
+```
 
-# To Do
+# Usage
 
-- [x] select image
-- [x] move image
-- [x] have script identify username
-- [ ] pop up for errors and done
-
-- [ ] make things more clear
-
-- [ ] package and put on aur?
-- [ ] easy set of instructions like one set of commands in a ``` ``` so you just copy and paste it once into the terminal and it works
+1. Select an image with the gui (I've only tested pngs)
+2. Check the image is correct by using the "Show image" button, should open in either an image viewer or a webbrowser
+3. Click "Get Command"
+4. Command should automatically be copied to clipboard, otherwise copy it manually
+5. run command in terminal

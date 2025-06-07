@@ -1,2 +1,2 @@
 source env/bin/activate
-python main.p
+python main.py
