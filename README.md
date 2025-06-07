@@ -9,7 +9,7 @@ Hope someone finds it useful :D
 
 ---
 
-# Easy Setup
+# Easy Setup / Install
 One command installer! Just copy and paste.
 ```
 git clone https://github.com/OmletCat/GDMpfpChanger.git
