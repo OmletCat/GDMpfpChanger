@@ -5,6 +5,8 @@ Personally I find it really difficult to change my profile pictures / login icon
 I couldn't find any clear guides or tools with this feature so im making my own!
 Hope someone finds it useful :D
 
+![image](https://github.com/user-attachments/assets/fd092d23-d77d-4469-a614-3172b550a031)
+
 ---
 
 # Easy Setup
