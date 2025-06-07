@@ -46,10 +46,11 @@ Either use the tool provided or follow these instructions
 # To Do
 
 - [x] select image
-- [ ] move image
+- [x] move image
 - [x] have script identify username
 - [ ] pop up for errors and done
 
+- [ ] make things more clear
 
-- [ ] export as exe
 - [ ] package and put on aur?
+- [ ] easy set of instructions like one set of commands in a ``` ``` so you just copy and paste it once into the terminal and it works

@@ -12,7 +12,7 @@ class App(tk.CTk):
         super().__init__()
 
 
-        self.my_title = "title"
+        self.my_title = "GDM pfp changer"
         self.title(self.my_title)
         self.geometry("400x150")
         self.grid_columnconfigure((0, 1), weight=1)
@@ -45,7 +45,7 @@ class App(tk.CTk):
         self.entry = tk.CTkEntry(self, textvariable=self.username)
         self.entry.grid(row=3, column = 1, padx=20, pady=20, sticky="ew")
 
-        self.username_label = tk.CTkLabel(self, text = "Username:")
+        self.username_label = tk.CTkLabel(self, text = "Username:\n(needed for file names)")
         self.username_label.grid(row = 3, column = 0, padx = 20, pady = 20, sticky = "ew")
 
         self.file_path = StringVar()
@@ -70,6 +70,7 @@ class App(tk.CTk):
         command = f"cp {src} {des}"
 
         top = ToplevelWindow()
-        top.text("Command:")
+        text = "Command:\nCopied to clipboard!\n\nRun command with sudo to change pfp!"
+        top.text(text)
         top.box(command)
         copy(command)
