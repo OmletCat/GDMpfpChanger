@@ -6,7 +6,24 @@ I couldn't find any clear guides or tools with this feature so im making my own!
 
 ---
 
-# Usage
+# Easy Setup
+One command installer
+```
+git clone https://github.com/OmletCat/GDMpfpChanger.git
+python -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
+
+# Easy run
+```
+source env/bin/activate
+python main.py
+```
+
+Note: You may need to install tkinter on your machine for the application to work, please refer to instructions below
+
+# Manual Install
 1. ensure you have the following dependancies
 - python
 - python tkinter
